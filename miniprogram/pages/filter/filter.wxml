@@ -1,0 +1,52 @@
+<view class = "page">
+    
+   <view class="page__bd page__bd_spacing">
+   <text>性别</text>
+     <van-radio-group
+    value="{{radio1}}"
+    data-key="radio1"
+    custom-class="demo-radio-group"
+    bind:change="onChange"
+  >
+    <van-radio name="1" custom-class="demo-radio">男</van-radio>
+    <van-radio name="2" custom-class="demo-radio">女</van-radio>
+    <van-radio name="3" custom-class="demo-radio">全部</van-radio>
+  </van-radio-group>
+  <text>拍摄地点</text>
+     <van-radio-group
+    value="{{radio2}}"
+    data-key="radio2"
+    custom-class="demo-radio-group"
+    bind:change="onChange"
+  >
+    <van-radio name="1" custom-class="demo-radio">沙河校区</van-radio>
+    <van-radio name="2" custom-class="demo-radio">学院路校区</van-radio>
+    <van-radio name="3" custom-class="demo-radio">校外</van-radio>
+    <van-radio name="4" custom-class="demo-radio">全部</van-radio>
+  </van-radio-group>
+  <text>已关注</text>
+     <van-radio-group
+    value="{{radio3}}"
+    data-key="radio3"
+    custom-class="demo-radio-group"
+    bind:change="onChange"
+  >
+    <van-radio name="1" custom-class="demo-radio">已关注</van-radio>
+    <van-radio name="2" custom-class="demo-radio">未关注</van-radio>
+    <van-radio name="3" custom-class="demo-radio">全部</van-radio>
+  </van-radio-group>
+  <text>照片类型</text>
+     <van-radio-group
+    value="{{radio4}}"
+    data-key="radio4"
+    custom-class="demo-radio-group"
+    bind:change="onChange"
+  >
+    <van-radio name="1" custom-class="demo-radio">单人</van-radio>
+    <van-radio name="2" custom-class="demo-radio">双人</van-radio>
+    <van-radio name="3" custom-class="demo-radio">集体</van-radio>
+    <van-radio name="4" custom-class="demo-radio">全部</van-radio>
+  </van-radio-group>
+
+  </view>
+</view>

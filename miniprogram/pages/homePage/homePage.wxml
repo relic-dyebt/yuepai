@@ -1,0 +1,45 @@
+<view class = "page">
+  <!--banner滑动图片-->
+  <swiper 
+  indicator-dots="true"
+  autoplay="true"
+  interval="3000"
+  duration="1000"
+>
+  <block wx:for="{{imgUrls}}">
+    <swiper-item>
+      <image src="{{item}}" class="slide-image" width="300" height="100" />
+    </swiper-item>
+  </block>
+  </swiper>
+
+  
+  <view class="page__bd page__bd_spacing">
+  <van-cell
+      title="排序"
+      value="{{message}}"
+      border="{{ false }}"
+      bindtap="actionSheetTap"
+    />
+    <van-cell
+      title="筛选"
+      value=""
+      border="{{ false }}"
+      bindtap="filterTap"
+    />
+  <action-sheet hidden="{{actionSheetHidden}}" bindchange="actionSheetChange">
+ <block wx:for-items="{{actionSheetItems}}">
+ <action-sheet-item class="item" bindtap="bind{{item.bindtap}}">{{item.txt}}</action-sheet-item>
+ </block>
+ <action-sheet-cancel class="cancel">取消</action-sheet-cancel>
+</action-sheet>
+
+<van-card
+  num="1"
+  price="2.00"
+  desc="基础信息测试"
+  title="测试标题"
+  thumb="{{ itemimageURL }}"
+/>
+  </view>
+</view>
